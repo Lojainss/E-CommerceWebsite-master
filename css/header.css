@@ -1,0 +1,202 @@
+body {
+  margin: 0;
+}
+
+#badge {
+  position: absolute;
+  background-color: rgb(255, 30, 30);
+  color: white;
+  border-radius: 50%;
+  padding: 5px 8px;
+  font-size: 14px;
+  top: -15px;
+  right: 15px;
+}
+
+#container {
+  height: 78px;
+  background-color: white;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1.5fr 1.5fr 5fr 1fr;
+  font-family: "Lato", sans-serif;
+  z-index: 1;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-sizing: border-box;
+  position: fixed;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302),
+    0 2px 6px 2px rgba(60, 64, 67, 0.149);
+}
+
+#shopName {
+  font-size: 40px;
+  font-family: "Lato", sans-serif;
+}
+
+#shopName a {
+  text-decoration: none;
+  color: rgb(29, 29, 29);
+}
+
+#shopName > b {
+  font-weight: 900;
+  font: black;
+}
+
+#collection {
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#collection a {
+  margin-inline: 10px;
+  text-decoration: none;
+  color: rgb(29, 29, 29);
+}
+
+.search {
+  padding: 14px;
+  color: rgb(29, 29, 29);
+  min-width: 25px;
+  text-align: center;
+  position: absolute;
+}
+
+.badgeContainer {
+  position: relative;
+}
+
+.addedToCart {
+  font-size: 30px;
+  margin-right: 25px;
+}
+
+#user {
+  display: flex;
+  align-items: center;
+}
+
+.userIcon {
+  font-size: 40px;
+}
+
+#search {
+  margin-left: 20px;
+  width: 35%;
+}
+
+#input {
+  width: 100%;
+  height: 3em;
+  padding: 2px 40px;
+  background-color: rgb(241, 241, 241);
+  border: none;
+  border-radius: 5px;
+}
+
+#input::placeholder {
+  font-weight: bold;
+}
+
+#input:focus {
+  outline: none;
+}
+
+#user a {
+  color: rgb(29, 29, 29);
+}
+
+/* ----------------------------- MEDIA QUERY --------------------------- */
+
+@media screen and (min-width: 320px) {
+  #container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #search {
+    display: none;
+  }
+  #collection {
+    display: none;
+  }
+  #shopName {
+    font-size: 20px;
+  }
+  .userIcon {
+    font-size: 20px;
+  }
+  .addedToCart {
+    font-size: 20px;
+  }
+  #badge {
+    padding: 2px 4px;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  #shopName {
+    font-size: 30px;
+  }
+  .userIcon {
+    font-size: 25px;
+  }
+  .addedToCart {
+    font-size: 23px;
+  }
+}
+
+@media screen and (min-width: 668px) {
+  #collection {
+    display: grid;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #search {
+    display: block;
+  }
+  #container {
+    display: grid;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #search {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .userIcon {
+    font-size: 30px;
+  }
+  .addedToCart {
+    font-size: 25px;
+  }
+  #badge {
+    padding: 3px 6px;
+  }
+  #shopName {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .userIcon {
+    font-size: 40px;
+  }
+  .addedToCart {
+    font-size: 30px;
+  }
+  #badge {
+    padding: 4px 8px;
+    font-size: 17px;
+  }
+}
